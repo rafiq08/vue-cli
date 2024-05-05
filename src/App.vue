@@ -1,28 +1,20 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+  <template>
+    <div id="app" class="container mt-5">
+      <h1>IDShop</h1>
+      <p class="animate__animated animate__fadeInRight">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <!-- <font-awesome-icon icon="cart-shopping"></font-awesome-icon> -->
+      <font-awesome-icon icon="shopping-cart"></font-awesome-icon>
+    </div>
+  </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {FontAwesomeIcons} from '@fortawesome/vue-fontawesome'; 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FontAwesomeIcons
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
