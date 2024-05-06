@@ -4,9 +4,9 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "animate.css/animate.css";
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faShoppingCart, faDollarSign} from '@fortawesome/free-solid-svg-icons';
+import {faShoppingCart, faDollarSign, faTrash} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faShoppingCart, faDollarSign);
+library.add(faShoppingCart, faDollarSign, faTrash);
 
 Vue.config.productionTip = false;
 

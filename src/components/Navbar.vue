@@ -20,7 +20,7 @@
                                 </span>
                                 {{ item.product.name }}
                                 <b>{{ item.product.price * item.qty | currencyFormat}}</b>
-                                <a href="#" class="badge badge-danger text-white" @click.stop="deleteItem(index)"><i class="fas fa-trash"></i></a>
+                                <a href="#" class="badge badge-danger text-white" @click.stop="$emit('delete', index)"><font-awesome-icon icon="trash"></font-awesome-icon></a>
                             </div>
                         </div>
                     </div>
