@@ -4,11 +4,11 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "animate.css/animate.css";
 import {library} from '@fortawesome/fontawesome-svg-core';
-import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {faShoppingCart, faDollarSign} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faShoppingCart);
+library.add(faShoppingCart, faDollarSign);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
