@@ -1,7 +1,8 @@
 <template>
   <div id="app" class="container mt-5">
     <h1>IDShop</h1>
-      <products
+      
+      <router-view
         :cart = "cart"
         :cartQty = "cartQty"
         :cartTotal = "cartTotal"
@@ -11,13 +12,11 @@
         @toggle = "toggleSliderStatus"
         @add = "addItem"
         @delete = "deleteItem"
-      ></products>
+      ></router-view>
   </div>
 </template>
 
 <script>
-
-import Products from "./components/Products.vue"
 
 export default {
   name: "App",
@@ -28,9 +27,6 @@ export default {
       cart: [],
       sliderStatus: false
     };
-  },
-  components: {
-    Products
   },
   mounted: function () {
     fetch("https://hplussport.com/api/products/order/price")
