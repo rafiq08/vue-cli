@@ -6,12 +6,12 @@
         :cart = "cart"
         :cartQty = "cartQty"
         :cartTotal = "cartTotal"
+        :sliderStatus = "style.sliderStatus"
         :maximum.sync = "maximum"
         :products = "products"
-        :sliderStatus = "sliderStatus"
         @toggle = "toggleSliderStatus"
-        @add = "addItem"
         @delete = "deleteItem"
+        @add = "addItem"
       ></router-view>
   </div>
 </template>
@@ -25,7 +25,9 @@ export default {
       maximum: 20,
       products: [],
       cart: [],
-      sliderStatus: false
+      style: {
+        sliderStatus: false
+      }
     };
   },
   mounted: function () {
@@ -53,7 +55,7 @@ export default {
   },
   methods: {
     toggleSliderStatus: function () {
-      this.sliderStatus = !this.sliderStatus;
+      this.style.sliderStatus = !this.style.sliderStatus;
     },
     addItem: function (product) {
       let productIndex;
@@ -72,11 +74,11 @@ export default {
         this.cart.push({ product: product, qty: 1 });
       }
     },
-    deleteItem: function (key) {
-      if (this.cart[key].qty > 1) {
-          this.cart[key].qty--;
+    deleteItem: function (id) {
+      if (this.cart[id].qty > 1) {
+          this.cart[id].qty--;
       } else {
-          this.cart.splice(key, 1);
+          this.cart.splice(id, 1);
       }
     }
   },
